@@ -6,7 +6,7 @@ const createFile = (request) => {
     fs.writeFileSync('hello-world.txt', 'Hello to this greaat world!', 'utf8');
 };
 
-const server = http.helloServer(createFile);
+const server = http.createServer(createFile);
 
 server.listen(port, (err) => {
     if(err){
